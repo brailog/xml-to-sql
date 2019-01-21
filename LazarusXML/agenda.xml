@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda text="Agenda">
+  <contato>
+    <nome>Joao da Silva</nome>
+    <telefone>(93)3522-0001</telefone>
+  </contato>
+  <contato>
+    <nome>Jose Sousa</nome>
+    <telefone>(93)3522-0002</telefone>
+    <email>jose@email.com.br</email>
+  </contato>
+  <contato>
+    <nome>Maria da Silva</nome>
+    <telefone>(93)3522-0003</telefone>
+    <telefone>(93)9122-0001</telefone>
+  </contato>
+  <contato>
+    <nome>Raimunda de Sousa</nome>
+    <email>rsousa@email.com.br</email>
+  </contato>
+  <contato>
+    <telefone>(93)9122-0001</telefone>  
+  </contato>
+</agenda>

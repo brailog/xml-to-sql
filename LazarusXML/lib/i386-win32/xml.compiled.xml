@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.4.1\bin\i386-win32\fpc.exe" Date="1014045633"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -Xs -WG -vewnhi -l &quot;-FiC:\Desenvolvimento\Lazarus XML\lib\i386-win32\&quot; -FuC:\lazarus\lcl\units\i386-win32\ -FuC:\lazarus\lcl\units\i386-win32\win32\ -FuC:\lazarus\packager\units\i386-win32\ &quot;-FuC:\Desenvolvimento\Lazarus XML\&quot; -Fu. &quot;-FUC:\Desenvolvimento\Lazarus XML\lib\i386-win32\&quot; -oxml.exe -dLCL -dLCLwin32 xml.lpr"/>
+</CONFIG>

@@ -1,0 +1,199 @@
+object frmXml: TfrmXml
+  Left = 1734
+  Height = 655
+  Top = 291
+  Width = 1211
+  Caption = 'Ler XML'
+  ClientHeight = 655
+  ClientWidth = 1211
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object btnAbrir: TButton
+    Left = 24
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Abrir'
+    OnClick = btnAbrirClick
+    TabOrder = 0
+  end
+  object btnLer: TButton
+    Left = 24
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Ler'
+    Enabled = False
+    OnClick = btnLerClick
+    TabOrder = 1
+  end
+  object tvwXML: TTreeView
+    Left = 32
+    Height = 368
+    Top = 240
+    Width = 520
+    TabOrder = 2
+  end
+  object edArquivo: TEdit
+    Left = 24
+    Height = 27
+    Top = 40
+    Width = 256
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 17
+    Top = 16
+    Width = 116
+    Caption = 'Nome do arquivo'
+    ParentColor = False
+  end
+  object add_no: TButton
+    Left = 312
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Adicionar'
+    OnClick = add_noClick
+    TabOrder = 4
+  end
+  object remover_no: TButton
+    Left = 312
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Remover'
+    OnClick = remover_noClick
+    TabOrder = 5
+  end
+  object edit_add: TEdit
+    Left = 312
+    Height = 27
+    Top = 40
+    Width = 232
+    TabOrder = 6
+    Text = 'edit_add'
+  end
+  object Label2: TLabel
+    Left = 312
+    Height = 17
+    Top = 24
+    Width = 87
+    Caption = 'Adição de nó'
+    ParentColor = False
+    OnClick = Label2Click
+  end
+  object Label3: TLabel
+    Left = 592
+    Height = 17
+    Top = 24
+    Width = 92
+    Caption = 'Seleção de nó'
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 872
+    Height = 312
+    Top = 24
+    Width = 320
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 7
+  end
+  object Button2: TButton
+    Left = 792
+    Height = 25
+    Top = 240
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 8
+  end
+  object selecao_no: TEdit
+    Left = 592
+    Height = 27
+    Top = 40
+    Width = 248
+    OnChange = selecao_noChange
+    TabOrder = 9
+    Text = 'selecao_no'
+  end
+  object Edit1: TEdit
+    Left = 576
+    Height = 27
+    Top = 240
+    Width = 200
+    OnChange = Edit1Change
+    TabOrder = 10
+    Text = 'Edit1'
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 584
+    Height = 25
+    Top = 320
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 11
+  end
+  object DBGrid1: TDBGrid
+    Left = 568
+    Height = 288
+    Top = 360
+    Width = 624
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 12
+  end
+  object dlgAbrir: TOpenDialog
+    Title = 'Abrir um arquivo'
+    DefaultExt = '.xml'
+    Filter = 'Arquivos xml|*.xml'
+    left = 128
+    top = 88
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    TransactIsolationLevel = tiReadCommitted
+    Connected = True
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'agade_dicionario'
+    User = 'postgres'
+    Password = 'teste123'
+    Protocol = 'postgresql'
+    left = 624
+    top = 560
+  end
+  object ZTable1: TZTable
+    Connection = ZConnection1
+    SortedFields = 'termos'
+    Active = True
+    TableName = 'public._dicionario'
+    LinkedFields = 'termos'
+    IndexFieldNames = 'termos Asc'
+    left = 792
+    top = 560
+  end
+  object DataSource1: TDataSource
+    DataSet = ZTable1
+    left = 720
+    top = 560
+  end
+end

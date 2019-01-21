@@ -1,0 +1,138 @@
+object frmXml: TfrmXml
+  Left = 19
+  Height = 635
+  Top = 142
+  Width = 1211
+  Caption = 'Ler XML'
+  ClientHeight = 635
+  ClientWidth = 1211
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object btnAbrir: TButton
+    Left = 24
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Abrir'
+    OnClick = btnAbrirClick
+    TabOrder = 0
+  end
+  object btnLer: TButton
+    Left = 24
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Ler'
+    Enabled = False
+    OnClick = btnLerClick
+    TabOrder = 1
+  end
+  object tvwXML: TTreeView
+    Left = 40
+    Height = 368
+    Top = 256
+    Width = 808
+    TabOrder = 2
+  end
+  object edArquivo: TEdit
+    Left = 24
+    Height = 23
+    Top = 40
+    Width = 256
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 16
+    Width = 93
+    Caption = 'Nome do arquivo'
+    ParentColor = False
+  end
+  object add_no: TButton
+    Left = 312
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'Adicionar'
+    OnClick = add_noClick
+    TabOrder = 4
+  end
+  object remover_no: TButton
+    Left = 312
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Remover'
+    OnClick = remover_noClick
+    TabOrder = 5
+  end
+  object edit_add: TEdit
+    Left = 312
+    Height = 23
+    Top = 40
+    Width = 232
+    TabOrder = 6
+    Text = 'edit_add'
+  end
+  object Label2: TLabel
+    Left = 312
+    Height = 15
+    Top = 24
+    Width = 70
+    Caption = 'Adição de nó'
+    ParentColor = False
+    OnClick = Label2Click
+  end
+  object Label3: TLabel
+    Left = 592
+    Height = 15
+    Top = 24
+    Width = 73
+    Caption = 'Seleção de nó'
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 872
+    Height = 592
+    Top = 24
+    Width = 320
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 7
+  end
+  object Button2: TButton
+    Left = 320
+    Height = 25
+    Top = 212
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 8
+  end
+  object selecao_no: TEdit
+    Left = 592
+    Height = 23
+    Top = 40
+    Width = 248
+    OnChange = selecao_noChange
+    TabOrder = 9
+    Text = 'selecao_no'
+  end
+  object Edit1: TEdit
+    Left = 592
+    Height = 23
+    Top = 176
+    Width = 200
+    TabOrder = 10
+    Text = 'Edit1'
+  end
+  object dlgAbrir: TOpenDialog
+    Title = 'Abrir um arquivo'
+    DefaultExt = '.xml'
+    Filter = 'Arquivos xml|*.xml'
+    left = 128
+    top = 88
+  end
+end

@@ -1,0 +1,59 @@
+object frmXml: TfrmXml
+  Left = 290
+  Height = 440
+  Top = 162
+  Width = 510
+  Caption = 'Ler XML'
+  ClientHeight = 440
+  ClientWidth = 510
+  LCLVersion = '0.9.29'
+  object btnAbrir: TButton
+    Left = 400
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = 'Abrir'
+    OnClick = btnAbrirClick
+    TabOrder = 0
+  end
+  object btnLer: TButton
+    Left = 400
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Ler'
+    Enabled = False
+    OnClick = btnLerClick
+    TabOrder = 1
+  end
+  object tvwXML: TTreeView
+    Left = 40
+    Height = 320
+    Top = 104
+    Width = 435
+    DefaultItemHeight = 17
+    TabOrder = 2
+  end
+  object edArquivo: TEdit
+    Left = 40
+    Height = 23
+    Top = 40
+    Width = 352
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 40
+    Height = 16
+    Top = 20
+    Width = 94
+    Caption = 'Nome do arquivo'
+    ParentColor = False
+  end
+  object dlgAbrir: TOpenDialog
+    Title = 'Abrir um arquivo'
+    DefaultExt = '.xml'
+    Filter = 'Arquivos xml|*.xml'
+    left = 338
+    top = 153
+  end
+end
